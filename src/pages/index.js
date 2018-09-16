@@ -49,9 +49,7 @@ export const pageQuery = graphql`
           publishDate
           tags
           heroImage {
-            file {
-              url
-            }
+            url
           }
           description
         }
@@ -62,9 +60,7 @@ export const pageQuery = graphql`
         shortBio
         title
         heroImage: image {
-          file {
-            url
-          }
+          url
         }
       }
     }

@@ -1,7 +1,7 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 import get from 'lodash/get'
-import Img from 'gatsby-image'
+// import Img from 'gatsby-image'
 import { graphql } from 'gatsby'
 
 import heroStyles from '../components/hero.module.css'
@@ -51,9 +51,7 @@ export const pageQuery = graphql`
           title
           publishDate
           heroImage {
-            file {
-              url
-            }
+            url
           }
           body
         }

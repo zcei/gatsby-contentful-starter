@@ -24,7 +24,7 @@ module.exports = {
   plugins: [
     'gatsby-transformer-remark',
     'gatsby-plugin-react-helmet',
-    'gatsby-plugin-sharp',
+    // 'gatsby-plugin-sharp',
     {
       resolve: 'gatsby-source-graphql',
       options: {
@@ -33,6 +33,22 @@ module.exports = {
         url: `https://cdn.contentful.com/spaces/${contentfulConfig.spaceId}/graphql/alpha`,
         headers: {
           Authorization: `Bearer ${contentfulConfig.accessToken}`,
+        }
+      }
+    },
+    {
+      resolve: 'gatsby-transformer-directives',
+      options: {
+        schemas: {
+          contentful: {
+            BlogPost: {
+              body: {
+                internal: {
+                  mediaType: 'text/markdown'
+                }
+              }
+            }
+          }
         }
       }
     }

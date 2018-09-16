@@ -50,9 +50,7 @@ export const pageQuery = graphql`
           publishDate
           tags
           heroImage {
-            file {
-              url
-            }
+            url
           }
           description
         }
